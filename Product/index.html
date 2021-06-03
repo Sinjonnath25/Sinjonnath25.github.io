@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+          $(document).ready(function(){
+      $("#heart1, #heart2, #heart3, #heart4,#heart5,#heart6,#heart7,#heart8").click(function(){
+        $(this).attr("class")=="bi bi-heart-fill"?
+        $(this).attr("class","bi bi-heart"):
+        $(this).attr("class","bi bi-heart-fill").css("color","red");
+      });
+
+          $("#like1,#like2,#like3,#like4,#like5,#like6,#like7,#like8").click(function(){
+              var s = $(this).text();
+              $(this).toggleClass("bg-info");
+              if ($(this).text() == "Add to Cart")
+                 $(this).html("<i class='bi bi-cart-fill'></i>Added to Cart");
+              else
+                 $(this).html("<i class='bi bi-cart4'></i>Add to Cart");
+            });
+
+          });
+    </script>
+    
+    <style type="text/css">
+      .icon-green {
+        color: green;
+      }
+      .icon-red {
+        color: red;
+      }
+    </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">hTrack</a>
+</nav>
+<h2>Products</h2>
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-3">
+<div class="card">
+  <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/71vIUIWF%2BxS._SL1500_.jpg" alt="Card image cap" height=300>
+  <div class="card-body">
+    <h5 class="card-title">Oreo
+    <small><span class="badge bg-success text-center text-white">4.4
+          <i class="bi bi-star-fill"></i>
+        </span></small></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p>Rs. 45.00&nbsp;<strike><small>Rs.50</strike> 10%</small> <i class="bi bi-patch-exclamation-fill"></i></p>
+    <div class="row">
+                      <div class="col-8"><a style="cursor:pointer" id="like1" class="btn btn-primary bg-success text-white
+                        "><i class="bi bi-cart4"></i>Add to Cart</a></div>
+          <div class="col-4 p-1"><a  class="icon-red"><i id="heart1" class="bi bi-heart"></i></a></div>
+        </div>
+  </div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="card" >
+  <img class="card-img-top" src="https://www.tresemme.com/content/dam/unilever/tresemme/united_states_of_america/pack_shot/category_pages_keratin_smooth_shampoo-32461748-jpg.jpg.ulenscale.375x375.jpg" alt="Card image cap"  height=300>
+  <div class="card-body">
+    <h5 class="card-title">Shampoo
+    <small><span class="badge bg-success text-center text-white">4.4
+          <i class="bi bi-star-fill"></i>
+        </span></small></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p>Rs. 200.00&nbsp;<strike><small>Rs. 250</strike> 20%</small> <i class="bi bi-patch-exclamation-fill"></i></p>
+    <div class="row">
+                      <div class="col-8"><a style="cursor:pointer" id="like2" class="btn btn-primary bg-success text-white
+                        "><i class="bi bi-cart4"></i>Add to Cart</a></div>
+          <div class="col-4 p-1"><a  class="icon-red"><i id="heart2" class="bi bi-heart"></i></a></div>
+        </div>
+  </div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="card">
+  <img class="card-img-top" src="https://cdn.igp.com/f_auto,q_auto,t_prodl/products/p-assorted-cadbury-chocolates-in-gift-box-110889-m.jpg" alt="Card image cap"  height=300>
+  <div class="card-body">
+    <h5 class="card-title">Cadbury
+    <small><span class="badge bg-success text-center text-white">4.4
+          <i class="bi bi-star-fill"></i>
+        </span></small></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p>Rs. 270.00&nbsp;<strike><small>Rs. 300</strike> 10%</small> <i class="bi bi-patch-exclamation-fill"></i></p>
+    <div class="row">
+                      <div class="col-8"><a style="cursor:pointer" id="like3" class="btn btn-primary bg-success text-white
+                        "><i class="bi bi-cart4"></i>Add to Cart</a></div>
+          <div class="col-4 p-1"><a class="icon-red"><i id="heart3" class="bi bi-heart"></i></a></div>
+        </div>
+  </div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="card">
+  <img class="card-img-top" src="https://www.chennaionlineflorists.com/images/SWCNUHA131-BH_Big.jpg" alt="Card image cap"  height=300>
+  <div class="card-body">
+    <h5 class="card-title">Laddu
+    <small><span class="badge bg-success text-center text-white">4.4
+          <i class="bi bi-star-fill"></i>
+        </span></small></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p>Rs. 108.00&nbsp;<strike><small>Rs. 120</strike> 10%</small> <i class="bi bi-patch-exclamation-fill"></i></p>
+    <div class="row">
+                      <div class="col-8"><a style="cursor:pointer" id="like4" class="btn btn-primary bg-success text-white
+                        "><i class="bi bi-cart4"></i>Add to Cart</a></div>
+          <div class="col-4 p-1"><a  class="icon-red"><i id="heart4" class="bi bi-heart"></i></a></div>
+        </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3">
+<div class="card">
+  <img class="card-img-top" src="https://media-services.digital-rb.com/s3/live-productcatalogue/sys-master/images/h88/he1/8867996958750/DettolSkincareSoap.jpg" alt="Card image cap" height=300>
+  <div class="card-body">
+    <h5 class="card-title">Dettol
+    <small><span class="badge bg-success text-center text-white">4.4
+          <i class="bi bi-star-fill"></i>
+        </span></small></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p>Rs. 54.00&nbsp;<strike><small>Rs. 60</strike> 10%</small> <i class="bi bi-patch-exclamation-fill"></i></p>
+    <div class="row">
+                      <div class="col-8"><a style="cursor:pointer" id="like5" class="btn btn-primary bg-success text-white
+                        "><i class="bi bi-cart4"></i>Add to Cart</a></div>
+          <div class="col-4 p-1"><a  class="icon-red"><i id="heart5" class="bi bi-heart"></i></a></div>
+        </div>
+  </div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="card" >
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="Card image cap"  height=300>
+  <div class="card-body">
+    <h5 class="card-title">Coconut Oil
+    <small><span class="badge bg-success text-center text-white">4.4
+          <i class="bi bi-star-fill"></i>
+        </span></small></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p>Rs. 200.00&nbsp;<strike><small>Rs. 250</strike> 20%</small> <i class="bi bi-patch-exclamation-fill"></i></p>
+    <div class="row">
+                      <div class="col-8"><a style="cursor:pointer" id="like6" class="btn btn-primary bg-success text-white
+                        "><i class="bi bi-cart4"></i>Add to Cart</a></div>
+          <div class="col-4 p-1"><a  class="icon-red"><i id="heart6" class="bi bi-heart"></i></a></div>
+        </div>
+  </div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="card">
+  <img class="card-img-top" src="https://nsoindia.com/wp-content/uploads/2021/01/CAKE.jpg" alt="Card image cap"  height=300>
+  <div class="card-body">
+    <h5 class="card-title">Cake
+    <small><span class="badge bg-success text-center text-white">4.4
+          <i class="bi bi-star-fill"></i>
+        </span></small></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p>Rs. 18.00&nbsp;<strike><small>Rs. 20</strike> 10%</small> <i class="bi bi-patch-exclamation-fill"></i></p>
+    <div class="row">
+                      <div class="col-8"><a style="cursor:pointer" id="like7" class="btn btn-primary bg-success text-white
+                        "><i class="bi bi-cart4"></i>Add to Cart</a></div>
+          <div class="col-4 p-1"><a  class="icon-red"><i id="heart7" class="bi bi-heart" id="heart"></i></a></div>
+        </div>
+  </div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="card">
+  <img class="card-img-top" src="https://rukminim1.flixcart.com/image/416/416/jyg5lzk0/soap/q/g/9/5-375-oil-clear-glow-soap-bar-75-gms-pack-of-5-pears-original-imafhmwfhus6hnzf.jpeg?q=70" alt="Card image cap"  height=300>
+  <div class="card-body">
+    <h5 class="card-title">Pears
+      <small><span class="badge bg-success text-center text-white">4.4
+          <i class="bi bi-star-fill"></i>
+        </span></small></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p>Rs. 45.00&nbsp;<strike><small>Rs. 50</strike> 10%</small> <i class="bi bi-patch-exclamation-fill"></i></p>
+   <div class="row">
+                      <div class="col-8"><a style="cursor:pointer" id="like8" class="btn btn-primary bg-success text-white
+                        "><i class="bi bi-cart4"></i>Add to Cart</a></div>
+           <div class="col-4 p-1"><a class="icon-red"><i id="heart8" class="bi bi-heart"></i></a></div>
+        </div>
+  </div>
+</div>
+</div>
+
+</div>
+</body>
+</html>
+
